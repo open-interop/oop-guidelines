@@ -17,9 +17,9 @@ All pull requests MUST adhere to the [Conventional Commits specification](https:
 
 ## Git workflow
 
-- There should be two protected branches in the repository `master` and `develop`.
+- There should be two protected branches in the repository `main` and `develop`.
 
-- `master` is the main branch where the source code of HEAD always reflects a production-ready state.
+- `main` is the main branch where the source code of HEAD always reflects a production-ready state.
 
 - `develop` is the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.
 
@@ -41,7 +41,7 @@ There are three different types of 'supporting' branches that you should use.
     
     - e.g. `feature/branch-name`
     
-    - Do not name your branch based on the following patterns `master`, `develop`, `release-*`, `release/*`, `hotfix/*`, or `hotfix-*`
+    - Do not name your branch based on the following patterns `main`, `develop`, `release-*`, `release/*`, `hotfix/*`, or `hotfix-*`
     
     - Branch names should never start with numbers.
 
@@ -51,7 +51,7 @@ There are three different types of 'supporting' branches that you should use.
 
 - May branch from: `develop`
 
-- Must merge back into: ` develop` and `master`
+- Must merge back into: ` develop` and `main`
 
 - Branch naming convention:
     
@@ -59,7 +59,7 @@ There are three different types of 'supporting' branches that you should use.
     
     - e.g. `release/branch-name`
     
-    - Do not name your branch based on the following patterns `master`, `develop`, `feature-*`, `feature/*`, `hotfix/*`, or `hotfix-*`
+    - Do not name your branch based on the following patterns `main`, `develop`, `feature-*`, `feature/*`, `hotfix/*`, or `hotfix-*`
     
     - Branch names should never start with numbers.
 
@@ -69,17 +69,17 @@ There are three different types of 'supporting' branches that you should use.
 
 - Version numbers should only be incremented/assigned at the time of branching the release branch. Not in `develop`.
 
-- When merging `release` into `master` you should create a tag on master with the release version.
+- When merging `release` into `main` you should create a tag on main with the release version.
 
-- Release branches should be merged back into `develop` after being merged into `master`. There will be conflicts...
+- Release branches should be merged back into `develop` after being merged into `main`. There will be conflicts...
 
 - Remove `release/` branches when you're done with them.
 
 #### Hotfix branches
 
-- May branch from: `master`
+- May branch from: `main`
 
-- Must merge back into: ` develop` and `master`
+- Must merge back into: ` develop` and `main`
 
 - Branch naming convention:
 
@@ -87,13 +87,13 @@ There are three different types of 'supporting' branches that you should use.
     
     - e.g. `hotfix/branch-name`
     
-    - Do not name your branch based on the following patterns `master`, `develop`, `feature-*`, `feature/*`, `release/*`, or `release-*`
+    - Do not name your branch based on the following patterns `main`, `develop`, `feature-*`, `feature/*`, `release/*`, or `release-*`
     
     - Branch names should never start with numbers.
     
 - Only for critical production bugs.
 
-- Branch from a tag off of `master`. Once complete, merge back into `master` and tag the release. Then merge back into `develop`.
+- Branch from a tag off of `main`. Once complete, merge back into `main` and tag the release. Then merge back into `develop`.
 
 - **Except** if a `release/` branch already exists. Merge the hotfix into the `release/` branch and **not** `develop`.
 
@@ -103,7 +103,7 @@ See the [Git branching model diagram](https://nvie.com/files/Git-branching-model
 
 ### Tagging
 
-- When a branch is merged into `master` a tag with the version number should be created against `master`. Use SemVer.
+- When a branch is merged into `main` a tag with the version number should be created against `main`. Use SemVer.
 
 ### Merging
 
@@ -115,7 +115,7 @@ See the [Git branching model diagram](https://nvie.com/files/Git-branching-model
     
     - You want to tidy up your branch (e.g. squash commits) and/or rebase it onto the `develop` in order to merge it later.
     
-    Never rewrite the history of the "master" branch or any other special branches (ie. used by production or CI servers).
+    Never rewrite the history of the "main" branch or any other special branches (ie. used by production or CI servers).
 
 - Keep the history clean and simple. Just before you merge your branch:
 
@@ -129,7 +129,7 @@ See the [Git branching model diagram](https://nvie.com/files/Git-branching-model
     # then merge
     ```
     
-    This results in a branch that can be applied directly to the end of the `master` branch and results in a very simple history.
+    This results in a branch that can be applied directly to the end of the `main` branch and results in a very simple history.
 
 ### Misc
 
